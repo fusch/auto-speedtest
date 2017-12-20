@@ -31,9 +31,10 @@ Dies geht mit dem Aufruf:
  crontab -e
 Es oeffnet sich ein Editor wo nach den # folgende Zeile hinzugefuegt werden muss:
   */5 * * * * /home/username/speedtest.sh > /dev/null
+  
 Der entscheide dene Wert ist die 5, dieser kann durch beliebigen Wert von 1-59 ausgetauscht werden.
-Nun die Datei speichern und nach einiger Zeit mit:
- cat speedtestausgabe-127.0.0.1.csv
-Die Ausgabe kontrollieren, die IP Adresse ist dann nicht wie hier im Beispiel sondern die eigene Externe Adresse.
+Nun die Datei speichern und nach einiger Zeit im "/home" verzeichnis des Benutzers mit:
+ cat speedtestausgabe-127.0.0.1*
+die Ausgabe kontrollieren. Die IP Adresse ist dann nicht wie hier im Beispiel sondern die eigene Externe Adresse.
 In der Datei wird folgende Syntax gefuehrt:
 Jahr-Monat-Tag:Stunden:Minuten:Sekunden;Ping;Download;Upload
